@@ -1,17 +1,5 @@
 "# Hello_you.verhaallijn" 
 
-from secrets import choice
-from time import sleep
-
-answer_a = ["A", "a"]
-answer_b = ["B", "b"]
-answer_c = ["C", "c"]
-answer_d = ["D""d"]
-yes = ["Y", "y", "yes"]
-no = ["N", "n", "no"]
-
-required = ("\nUse only A, B, or C\n")
-
 print("Hi! ")
 sleep(2.5)
 print("in this simulation you will play a person who's just in the Netherlands. You just applied for asylum")
@@ -72,7 +60,7 @@ def first():
 
 #stuk04
 def second():
- print("for the next stop can you choose now. Between. do you want to go to the: \nA. Kunsthal Rotterdam \nB. fotomuseum ")
+ print("for the next stop can you choose now. Between \nA. Kunsthal  \nB. fotomuseum ")
  choice = input()
  if choice in answer_a:
     kunsthal()
@@ -84,9 +72,9 @@ def second():
 
 #stuk05
 def kunsthal():
- print("you have decided to go to the kunsthal \nyou and you fellow students are discussing where do you want to go.")
+ print("you have decided to go to the kunsthal \nyou and you fellow students are discussing. where do you want to go.")
  sleep(2.5)
- print("4 people want to go to ""illustrator"" and the other 4 wants to ""stap in de schoenen van tim walker"" \nwhere do you want to go? ")
+ print("4 students want to go to ""illustrator"" and the other 4 wants to ""stap in de schoenen van tim walker"" \nwhere do you want to go? ")
  print("A. Illustrator \nB. Stap in de schoenen van tim walker ")
  choice = input()
  if choice in answer_a:
@@ -104,16 +92,16 @@ def Illustrator():
  choice = input()
  if choice in answer_a:
    print("nice painting! I like the way how you draw the euromast")
-   end1()
+   endChoose()
  elif choice in answer_b:
    print("beautiful i see you like het park")
-   end1()
+   endChoose()
  elif choice in answer_c:
    print("hmmm i see you paint het kleine huis")
-   end1()
+   endChoose()
  elif choice in answer_d:
    print("interest choice")
-   end1()
+   endChoose()
  else:
    print(required)
    Illustrator()
@@ -131,42 +119,42 @@ def tim_walker():
    TM()  
 
 #stuk08
-def end1():
+def endChoose():
  print("after 2 hours of hard work your master piece is done and the time is up. the teacher says that we have two options \nA. we can all go home now \nB. we can diner at the goudenwolk.")
  choice = input()
  if choice in answer_a:
-   end1T()
+   travelb1()
  elif choice in answer_b:
-   end2()
+   dinner()
  else:
    print(required)
-   end1()
+   endChoose()
 
 #stuk09
-def end2():
+def dinner():
  print("the waiter ask what you want. You can choose between \nA. spaghetti \nB. pizza \nC. chilli con carne ")
  choice = input()
  if choice in answer_a:
-  print("you liked the spaghetti")
-  print("you had a good day, have a nice painting and a and well dined")
-  end2T()
+   print("you liked the spaghetti")
+   print("you had a good day, have a nice painting and a and well dined")
+   travelb2()
  elif choice in answer_b:  
    print("the pizza was delicious you said")
    print("you had a good day, have a nice painting and a and well dined")
-   end2T()
+   travelb2()
  elif choice in answer_c:  
    print("its not bad you said")
    print("you had a good day, have a nice painting and a and well dined")
-   end2T()
+   travelb2()
  else:
    print(required)
-   end2()
+   dinner()
 
 #stuk10
 def TM():
   print("after more than 3 hours looking at art the end is in sight")
   print("you had a great day and learn so much about tim walker's art")
-  end2()
+  dinner()
 
 #stuk11
 def fotomuseum():
@@ -220,10 +208,10 @@ def gio():
   choice = input()
   if choice in answer_a:
     print("the guide understand why you choose selfies but hes says also its not creative enough ")
-    endCHoose()
+    endCHoose2()
   elif choice in answer_b:
     print("the guide finds that you and gio made great pictures")
-    endCHoose()
+    endCHoose2()
   else:
    print(required)
    gio()
@@ -234,10 +222,10 @@ def Brian():
   choice = input()
   if choice in answer_a:
    print("the guide understand why you choose selfies but hes says also its not creative enough ")
-   endCHoose()
+   endCHoose2()
   elif choice in answer_b:
     print("the guide finds that you and Brian made great pictures")
-    endCHoose()
+    endCHoose2()
   else:
    print(required)
    Brian()
@@ -248,26 +236,26 @@ def leyla():
   choice = input()
   if choice in answer_a:
    print("the guide understand why you choose selfies but hes says also its not creative enough ")
-   endCHoose()
+   endCHoose2()
   elif choice in answer_b:
     print("the guide finds that you and leyla made great pictures")
-    endCHoose()
+    endCHoose2()
   else:
    print(required)
    leyla()
 
 #stuk17
-def endCHoose():
+def endCHoose2():
   print("at the end of the day you all go home but when you walk to the exit you see a giftshop are you gonna ask to get al a soevenir or not?")
   choice = input()
   if choice in yes:
     souvenir()
   elif choice in no:
     print ("you had a great day and you al are gonna go home now ")
-    end3T
+    travelb3()
   else:
     print(required)
-    endCHoose()
+    endCHoose2()
 
 #stuk18
 def souvenir():
@@ -275,33 +263,33 @@ def souvenir():
   choice = input()
   if choice in answer_a:
    print("you bought a nice plussy ")
-   end4T()
+   travelb4()
   elif choice in answer_b:
    print("you bought a nice T-shirt")
-   end4T()
+   travelb4()
   elif choice in answer_c:
    print("you bought a nice keychain")
-   end4T()
+   travelb4()
   else:
     print(required)
     souvenir()
 
 #stuk19
-def end1T():
+def travelb1():
  print("when you tried to get your paintings on the bus it was too tight the kunsthal would like to keep your paintings but then you have to pick up the painting within a week")
  print("do you agree?")
  if choice in yes:
    print("you agreed but unfortunately you forgot")
-   end1H
+   end1()
  elif choice in no:
    print("you took the risk but unfortunately they were damaged")
-   end1H()
+   end1()
  else:
    print(required)
-   end1T()
+   travelb1()
 
 #stuk20
-def end1H():
+def end1():
   print("after the trip you are all tired but it was a fun and educational day")
   print("Do you think you also want to go to the Kunsthal in Rotterdam")
   choice = input()
@@ -311,27 +299,27 @@ def end1H():
    print("well maybe you like to go somewhere else in another city like in Haarlem or Amsterdam or Leiden. there are also many museums to visit")
   else:
    print(required)
-   end1H()
+   end1()
 
 #stuk21
-def end2T():
+def travelb2():
   print("after dinner you will take the bus back home who will you sit next to on the return journey? \nA. Micheal \nB. Eugene \nC. James ")
   choice = input()
   if choice in answer_a:
    print("you sat down next to micheal and the whole trip was boring because he was only sleeping.")
-   end2H()
+   end2()
   elif choice in answer_b:
    print("you sat down next to Eugene and you listened to music together the whole journey.")
-   end2H()
+   end2()
   elif choice in answer_c:
    print("you sat down next to james that was a mistake because he got carsick and puked all over you.")
-   end2H()
+   end2()
   else:
    print(required)
-   end2T
+   travelb2()
 
 #stuk22
-def end2H():
+def end2():
   print("after this day you had a fantastic day and you are full of food")
   print("Do you think you also want to go to the Kunsthal in Rotterdam?")
   choice = input()
@@ -341,25 +329,25 @@ def end2H():
    print("well maybe you like to go somewhere else in another city like in Haarlem or Amsterdam or Leiden. there are also many museums to visit")
   else:
    print(required)
-   end2T()
+   end2()
 
 #stuk23
-def end3T():
+def travelb3():
   print("when you walked to the bus you asked if you could sit in the front because you are a bit nauseous")
   print("they asked if you wanted a bucket just to be sure \n Y/N")
   choice = input()
   if choice in yes:
    print("you couldn't hold it in anymore and you threw up luckily you had that bucket")
-   end3H()
+   end3()
   elif choice in no:
    print("you couldn't hold it anymore and you threw up")
-   end3H()
+   end3()
   else:
    print(required)
-   end3T()
+   travelb3()
 
 #stuk24
-def end3H():
+def end3():
   print("when you got home you had a bad aftertaste but also a fun and educational day. would you go to it too the foto museum? ")
   choice = input()
   if choice in yes:
@@ -368,28 +356,28 @@ def end3H():
    print("there are always other options to go to")
   else:
    print(required)
-   end3H()
+   end3()
 
 #stuk25
-def end4T():
+def travelb4():
   print("when you walked to the bus with your beautiful souvenir are you going to exchange souvenirs with someone who are you going to do that with?")
   print("A. Eugene \nB. gio \nC. leyla")
   choice = input()
   if choice in answer_a:
    print("you are not happy with the exchange")
-   end4h()
+   end4()
   elif choice in answer_b:
    print("you are happy with the exchange")
-   end4h()
+   end4()
   elif choice in answer_c:
    print("you are very satisfied with the exchange")
-   end4h()
+   end4()
   else:
    print(required)
-   end4T()
+   travelb4()
 
 #stuk26
-def end4h():
+def end4():
   print("after the trip you learned a lot and took a souvenir home")
   print("would you go to it foto museum? \n Y/N")
   choice = input()
@@ -399,6 +387,6 @@ def end4h():
    print("then maybe you'll find the kunsthal more fun")
   else:
    print(required)
-   end4h
+   end4
 
 intro() 
